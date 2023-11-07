@@ -1,11 +1,25 @@
 import { useState } from 'react'
 import { Header } from './components/Header'
+
+import styles from './styles.module.css'
+
 import './global.css';
+import { Post } from './components/Post';
+import { SideBar } from './components/SideBar';
 
 
 function App() {
   return (
-    <Header/>
+    <div >
+      <Header/>
+      <div className={styles.wrapper}>
+         <SideBar/>
+          <main>
+            <Post/>
+            <Post/>
+          </main>
+      </div>
+    </div>
   )
 }
 

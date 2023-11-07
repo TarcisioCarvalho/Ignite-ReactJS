@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './styles.module.css';
-import igniteLogoImg from '../../assets/logo.svg';
+import styles from './styles.module.css'
+import igniteLogoImg from '../../assets/logo.svg'
 
 export const Header = () => {
   return (
