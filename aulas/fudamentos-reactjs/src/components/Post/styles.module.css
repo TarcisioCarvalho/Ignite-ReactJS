@@ -16,7 +16,24 @@
 
 .author{
     display: flex;
+    gap: 1rem;
+}
+
+.author div{
+    display: flex;
     flex-direction: column;
+}
+
+.author div strong{
+    margin-top: 7px;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.author div span{
+    color: var(--gray-400);
+    font-size: .875rem;
+
 }
 .avatar{
     width: calc(3rem + 12px);
@@ -28,7 +45,7 @@
 
 .content{
     line-height: 1.6;
-    color: var(--gray-600);
+    color: var(--gray-300);
     margin-top: 1.5rem;
 }
 
@@ -53,6 +70,7 @@
     border-top: 1px solid var(--gray-600);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
 }
 
@@ -74,6 +92,15 @@
     color: var(--gray-300);
 }
 
+.commentForm footer{
+    visibility: hidden;
+    max-height: 0;
+}
+
+.commentForm:focus-within footer{
+    visibility: visible;
+    max-height: none;
+}
 
 .commentForm button{
     background-color: var(--green-500);
@@ -83,4 +110,9 @@
     border: 0;
     font-weight: bold;
     cursor: pointer;
+    transition: .2s;
+}
+
+.commentForm button:hover{
+    background-color: var(--green-300);
 }

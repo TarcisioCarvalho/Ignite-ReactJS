@@ -6,8 +6,10 @@ export const Post = () => {
     <header>
       <div className={styles.author}>
         <img className={styles.avatar} src="https://github.com/tarcisioCarvalho.png"/>
-        <strong>Tarcísio Carvalho</strong>
-        <span>Developer</span>
+        <div>
+          <strong>Tarcísio Carvalho</strong>
+          <span>Developer</span>
+        </div>
       </div>
      <time title="11 de maio de" dateTime="2022-05-11 08:13:30">
       publica há 1 hora
@@ -25,9 +27,11 @@ export const Post = () => {
       <textarea 
       placeholder="Deixe um comentário"
       />
-      <button type="submit">
-        Comentar
-      </button>
+      <footer>
+        <button type="submit">
+          Comentar
+        </button>
+      </footer>
     </form>
   </article>
 }
