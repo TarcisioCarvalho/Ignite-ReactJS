@@ -17,7 +17,9 @@ function App() {
           <main>
             <Post/>
             <Post/>
+            <Comment/>
           </main>
+          
       </div>
     </div>
   )
