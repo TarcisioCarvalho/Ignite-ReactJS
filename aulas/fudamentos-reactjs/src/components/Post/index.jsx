@@ -33,5 +33,9 @@ export const Post = () => {
         </button>
       </footer>
     </form>
+
+    <div style={styles.commentList}>
+        <Comment/>
+    </div>
   </article>
 }
