@@ -75,6 +75,8 @@ function App() {
             <Post/>
             <Post/>
             <Post/>
+            <Post/>
+            <Post/>
           </main>
           
       </div>
