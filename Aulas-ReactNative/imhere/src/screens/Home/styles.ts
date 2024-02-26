@@ -6,14 +6,14 @@ export const styles = StyleSheet.create({
         padding:24
     },
     eventName:{
-      color:"#FDFCFE",
-      fontSize:24,
-      fontWeight:"bold",
-      marginTop:48
+       color:"#FDFCFE",
+       fontSize:24,
+       fontWeight:"bold",
+       marginTop:48
      },
      eventDate:{
-      color:"#6B6B6B",
-      fontSize:16
+        color:"#6B6B6B",
+        fontSize:16
      },
      input:{
         height:56,
@@ -22,5 +22,17 @@ export const styles = StyleSheet.create({
         color:"#FFF",
         padding:16,
         fontSize:16
+     },
+     buttonText:{
+        color:"#FFF",
+        fontSize:24
+     },
+     button:{
+        width:56,
+        height:56,
+        borderRadius:5,
+        backgroundColor:"#31CF67",
+        alignItems:"center",
+        justifyContent:"center"
      }
   });
