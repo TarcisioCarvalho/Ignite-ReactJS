@@ -1,10 +1,29 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { FlatList, ScrollView, Text, TextInput, TouchableOpacity, View, Alert } from "react-native";
 import { styles } from "./styles";
 import Participant from "../../components/Participant";
 
 export  function Home(){
+
+  const participants = ["Simone","Patricia","Ana Carolina","Mariana","Regina","Michele","Eduarda","Leise","Analia","Mariana India","Williely","Sandra","Angelica","Brenda","Daniela","Maria","Edna"]
+
   function handleParticipantAdd(){
-    console.log("VocÊ Clicou");
+    if(participants.includes("Simone"))
+    return Alert.alert("Participante existe","Já existe um participante na lista com esse nome");
+  };
+
+  function handleParticipantRemove(name : string){
+    Alert.alert("Remover",`Remover o participante ${name} ?`,
+    [
+      {
+        text:"Sim",
+        onPress:() => Alert.alert("Deletado!")
+      },
+      {
+        text:"Não",
+        style:"cancel"
+      }
+    ])
+    console.log(`Remove ${name}`);
   }
   return(
     <View style = {styles.container}>
@@ -22,8 +41,22 @@ export  function Home(){
             </Text>
           </TouchableOpacity>
       </View>
-      <Participant name = "Tarcísio"/>
-      <Participant name = "Ana"/>
+      <FlatList
+        data={participants}
+        keyExtractor={item => item}
+        renderItem={({item}) => (
+          <Participant key={item} name = {item} onRemove = {() =>handleParticipantRemove(item)}/>
+        )}
+        showsVerticalScrollIndicator = {false}
+        ListEmptyComponent={() => (
+          <Text style = {styles.listEmptyText}>
+            Ninguém Chegou no evento ainda ? Adicione participantes a sua lista de presença
+          </Text>
+        )}
+      />
+     
+      
+     
     </View>
   );
 }
