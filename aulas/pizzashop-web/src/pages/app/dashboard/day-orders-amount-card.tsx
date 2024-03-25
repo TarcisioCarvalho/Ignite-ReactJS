@@ -14,7 +14,7 @@ export const DayhOrdersAmountCard = () => {
                 </span>
                 <p className="text-xs text-muted-foreground">
                     <span className="text-rose-500 dark:text-rose-400">
-                        -4 %
+                        - 4 %
                     </span> em relação a ontem
                 </p>
             </CardContent>
